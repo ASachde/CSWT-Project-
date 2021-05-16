@@ -1,0 +1,146 @@
+<html>
+	<head>
+  <link rel="stylesheet" type="text/css" href="css2/2.css">
+  <link rel="stylesheet" type="text/css" href="css2/1.css">
+  </head>
+<script type="text/javascript">
+var answers = ["B","A","D","C","B","D","A","C"]; 
+    tot = answers.length;
+
+function getCheckedValue( radioName ){
+    var radios = document.getElementsByName( radioName );
+    for(var y=0; y<radios.length; y++)
+      if(radios[y].checked) return radios[y].value;
+}
+
+function getScore(){
+  var score = 0;
+  for (var i=0; i<tot; i++)
+    if(getCheckedValue("question"+i)===answers[i]) score += 1;
+  return score;
+}
+
+
+function returnScore(){
+  alert("Your score is "+ getScore() +"/"+ tot);
+  
+  
+  
+  
+  if(getScore()>=6)
+	{
+		alert("You have qualified For the discount voucher ! Congratulations further details will be sent to your registered Email ! Thank You  ");
+		
+	}
+	else
+	{
+	alert("Better luck next time ! Thank You" );	
+	}
+
+}
+</script>
+<body>
+	<img src="imgs2/quiz.jpg" class="center"height="300" width="600">
+<h1> QUIZ </h1>
+<ol>
+  <li>
+    <h4>Goa lies on which coast ?</h4>
+    <input type="radio" name="question0" value="A">Eastern Coast<br>
+    <input type="radio" name="question0" value="B">Western Coast<br>
+    <input type="radio" name="question0" value="C">Central Coast<br>
+    <input type="radio" name="question0" value="D">Mediterranean Coast<br>
+  </li>
+  <li>
+    <h4>When was Periyar National Park and Wildlife Sanctuary established ?</h4>
+    <input type="radio" name="question1" value="A">1934<br>
+    <input type="radio" name="question1" value="B">1923<br>
+    <input type="radio" name="question1" value="C">1943<br>
+    <input type="radio" name="question1" value="D">1924<br>
+  </li>
+  <li>
+    <h4>Ellora Caves lie in which state of India?</h4>
+    <input type="radio" name="question2" value="A">Karnataka<br>
+    <input type="radio" name="question2" value="B">Punjab<br>
+    <input type="radio" name="question2" value="C">Tamil Nadu<br>
+    <input type="radio" name="question2" value="D">Maharashtra<br>
+  </li>
+ <li>
+  <h4>Main Attraction Of Mysore of?</h4>
+    <input type="radio" name="question3" value="A">Mysore Garden<br>
+    <input type="radio" name="question3" value="B">Mysore Street <br>
+    <input type="radio" name="question3" value="C">Mysore Palace<br>
+    <input type="radio" name="question3" value="D">Mysore Bazaar<br>
+  </li>
+<li>
+<h4>In which city is the Jaisalmer Fort located in India?</h4>
+    <input type="radio" name="question4" value="A">Jodpur<br>
+    <input type="radio" name="question4" value="B">Jaisalmer<br>
+    <input type="radio" name="question4" value="C">Jaipur<br>
+    <input type="radio" name="question4" value="D">Bikaner<br>
+  </li>
+ <li> 
+<h4>How many years did  Hyderabad's Mecca Masjid take to complete?</h4>
+    <input type="radio" name="question5" value="A">90<br>
+    <input type="radio" name="question5" value="B">70<br>
+    <input type="radio" name="question5" value="C">60<br>
+    <input type="radio" name="question5" value="D">80<br>
+  </li>
+  
+<li>  
+<h4>Where do Andaman Islands lie ?</h4>
+    <input type="radio" name="question6" value="A">Bay Of Bengal<br>
+    <input type="radio" name="question6" value="B">Bay Of Panama<br>
+    <input type="radio" name="question6" value="C">North-Pacific Ocean<br>
+    <input type="radio" name="question6" value="D">Bay Of Berlin<br>
+  </li>  
+ 
+<li> 
+ <h4>Darjeeling a town in northeast India  is very  famous for?</h4>
+    <input type="radio" name="question7" value="A">Coffee<br>
+    <input type="radio" name="question7" value="B">Cotton<br>
+    <input type="radio" name="question7" value="C">Tea<br>
+    <input type="radio" name="question7" value="D">Rice<br>
+  </li>   
+  
+  
+  
+</ol>
+
+
+
+<button class="register_btn" onclick="returnScore()" >View Results</button>
+
+
+</body>
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
